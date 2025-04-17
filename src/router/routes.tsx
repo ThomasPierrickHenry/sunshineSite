@@ -1,4 +1,7 @@
 import { ReactNode, lazy } from "react";
+import Hiring from "layouts/hiring/Hiring";
+import Link from "layouts/link/Link";
+
 
 const Home = lazy(() => import("../layouts/home/Home"));
 const AboutUs = lazy(() => import("../layouts/aboutUs/AboutUs"));
@@ -15,6 +18,8 @@ export type Route = {
 type Routes = {
     home: Route;
     aboutUs: Route;
+    hiring: Route;
+    link: Route;
     login: Route;
     register: Route;
     dashboard: Route;
@@ -36,6 +41,22 @@ const ROUTES : Routes = {
         private: false,
         component: <AboutUs />,
         id: "aboutUs",
+        
+    },
+    hiring: {
+        path: "/hiring",
+        name: "Recrutement",  
+        private: false,
+        component: <Hiring />,
+        id: "hiring",
+        
+    },
+    link: {
+        path: "/link",
+        name: "Nos Liens",  
+        private: false,
+        component: <Link />,
+        id: "hiring",
         
     },
     login: {

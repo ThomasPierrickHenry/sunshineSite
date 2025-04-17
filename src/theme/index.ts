@@ -22,3 +22,4 @@ import baseStyled, {
   export type Theme = typeof light
   export type { DefaultTheme, FlattenSimpleInterpolation }
   export const styled = baseStyled as ThemedStyledInterface<Theme>
+   

@@ -9,7 +9,8 @@ export const dark = {
 export const light = {
     colors: {
       primary: "#468bb0",
-      secondary: "#3c3330",
-      tertiary: "#4a3f3c",
+      secondary: "#69b3db",
+      tertiary: "#84caf0",
       font: "#000000",
   }} as const
+

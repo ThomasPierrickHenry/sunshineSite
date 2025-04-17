@@ -1,4 +1,5 @@
-import { styled} from 'theme'
+import { styled } from 'theme'
+
 
 export const Container = styled.div`
     display: flex;
@@ -7,9 +8,8 @@ export const Container = styled.div`
     height: 100px;
     align-items: center;
     padding: 5px;
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${props => props.theme.colors.secondary};
     color: white;
     font-size: 1.2rem;
-    box-shadow: 2px 2px 9px 5px rgba(0,0,0,0.6);
+    box-shadow: 2px 2px 9px -1px rgba(0,0,0,0.6);
     `
-    

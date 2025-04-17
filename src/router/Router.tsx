@@ -1,9 +1,10 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import ProtectedRoutes from './Protected';
 import ROUTES from './routes';
-import { Suspense } from 'react';
+import { Suspense, ReactElement, useState } from 'react';
 import Header from 'components/header/Header';
 import Footer from 'components/footer/Footer';
+import GlobalStyle, { dark, light, ThemeProvider } from 'theme'
 
 
 
@@ -32,4 +33,18 @@ const Router = () => {
     );
 }
 
-export default Router;
+
+export default function AppRouter():ReactElement {
+    const [theme] = useState<"light"|"dark">("light")
+    const getTheme = () => theme === "light" ? light : dark
+    
+    return (
+      <ThemeProvider theme={getTheme()}>
+        <GlobalStyle />
+        <Router />
+      </ThemeProvider>
+  
+    )
+  }
+
+
